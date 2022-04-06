@@ -1,0 +1,166 @@
+@keyframes rot {
+  0% {
+    transform: rotateX(45deg) rotateZ(45deg) rotate3d(1, 1, -1, 0deg);
+  }
+  100% {
+    transform: rotateX(45deg) rotateZ(45deg) rotate3d(1, 1, -1, 360deg);
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  color: #9C89B8;
+  text-align: center;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  box-shadow: 0 0 20px 0 #E5E6E4;
+  background-color: rgba(156, 137, 184, 0.2);
+}
+body {
+  height: 100%;
+  background: -webkit-linear-gradient(left top, #F0E6EF, #B8BEDD);
+}
+body .cube {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  top: 15%;
+  left: 5%;
+  animation: rot 5s linear infinite;
+  transform: rotateX(45deg) rotateZ(45deg);
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+body .cube span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+body .cube span img {
+  width: 100%;
+  height: 100%;
+}
+body .cube span:nth-child(1) {
+  transform: rotateY(0deg) translateZ(25px);
+}
+body .cube span:nth-child(2) {
+  transform: rotateY(90deg) translateZ(25px);
+}
+body .cube span:nth-child(3) {
+  transform: rotateY(180deg) translateZ(25px);
+}
+body .cube span:nth-child(4) {
+  transform: rotateY(270deg) translateZ(25px);
+}
+body .cube span:nth-child(5) {
+  transform: rotateX(90deg) translateZ(25px);
+}
+body .cube span:nth-child(6) {
+  transform: rotateX(270deg) translateZ(25px);
+}
+body .void {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 120px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #9C89B8;
+  background-color: rgba(156, 137, 184, 0.2);
+}
+body .login_reg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  color: #F0A6CA;
+  border-radius: 24px;
+  box-shadow: 0 0 20px 0 #E5E6E4;
+  background-color: rgba(156, 137, 184, 0.2);
+}
+body .gai_pass {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 80px;
+  height: 30px;
+  border-radius: 15px;
+}
+body .tit {
+  width: 350px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  font-family: "微软雅黑";
+  margin: 50px auto;
+  border-radius: 25px;
+  box-shadow: 0 0 20px 0 #E5E6E4;
+  background-color: rgba(156, 137, 184, 0.2);
+}
+body .sub {
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 15px;
+}
+body .tab {
+  overflow: hidden;
+  width: 1000px;
+  margin-top: 30px;
+  margin-left: calc(50% - 500px);
+  border: 2px solid #B8BEDD;
+  border-radius: 20px;
+}
+body .tab .head li {
+  float: left;
+  width: 20%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  border-right: 2px solid #B8BEDD;
+  border-bottom: 2px solid #B8BEDD;
+}
+body .tab .head li:last-child {
+  border-right: 0;
+}
+body .tab .tab_body li span {
+  float: left;
+  width: 20%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  border-right: 2px solid #B8BEDD;
+  border-bottom: 2px solid #B8BEDD;
+}
+body .tab .tab_body li span:last-child {
+  border-right: 0;
+}
+body .tab .tab_body li:last-child span {
+  border-bottom: 0;
+}
+body .tab .tab_body li a {
+  transition: all 0.5s;
+}
+body .tab .tab_body li a:hover {
+  color: aquamarine;
+}

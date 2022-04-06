@@ -1,0 +1,226 @@
+* {
+  padding: 0;
+  margin: 0;
+  /*CSS3盒子模型*/
+  box-sizing: border-box;
+  text-align: center;
+  color: #D7D2CC;
+}
+html {
+  height: 100%;
+  background: -webkit-linear-gradient(left top, #304352, #D7D2CC, #304352);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+span {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #D7D2CC;
+}
+.rot180 {
+  transform: rotateY(180deg);
+}
+body {
+  perspective: 1000px;
+}
+body .box {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin: 300px auto;
+  transform-style: preserve-3d;
+  transition: all 2s;
+}
+body .box .box_login {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  transform: translateZ(1px);
+  box-shadow: 0 0 25px #B8BEDD;
+  background: -webkit-linear-gradient(right bottom, #D7D2CC, #304352);
+}
+body .box .box_login .login_box {
+  float: left;
+  position: relative;
+  width: 80%;
+  height: 100%;
+  color: #D7D2CC;
+}
+body .box .box_login .login_box span {
+  position: absolute;
+  top: 20px;
+  left: 175px;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 2px solid #D7D2CC;
+}
+body .box .box_login .login_box form {
+  display: block;
+  width: 300px;
+  height: 150px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+body .box .box_login .login_box form input {
+  display: block;
+  width: 300px;
+  height: 40px;
+  border: 0;
+  color: #D7D2CC;
+  border-bottom: 2px solid #D7D2CC;
+  background-color: transparent;
+}
+body .box .box_login .login_box form button {
+  display: block;
+  width: 50px;
+  height: 30px;
+  color: #D7D2CC;
+  cursor: pointer;
+  margin: 20px auto;
+  transition: all 0.5s;
+  border: 0px;
+  border: 2px solid #D7D2CC;
+  border-radius: 15px;
+  background-color: transparent;
+}
+body .box .box_login .login_box form button:hover {
+  color: #304352;
+  border-color: #304352;
+}
+body .box .box_login .login_box a {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #D7D2CC;
+  transition: all 0.5s;
+}
+body .box .box_login .login_box a:hover {
+  color: #304352;
+}
+body .box .box_login .reg_box {
+  float: left;
+  position: relative;
+  width: 20%;
+  height: 100%;
+  color: #727d86;
+}
+body .box .box_login .reg_box span {
+  display: block;
+  position: absolute;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #727d86;
+  transition: all 0.5s;
+  border: 2px solid #727d86;
+  border-radius: 30px;
+}
+body .box .box_login .reg_box span:nth-child(1) {
+  top: 70px;
+}
+body .box .box_login .reg_box span:nth-child(1) a {
+  color: #727d86;
+  transition: all 0.5s;
+}
+body .box .box_login .reg_box span:nth-child(2) {
+  top: 170px;
+}
+body .box .box_login .reg_box span:hover {
+  color: #D7D2CC;
+  background-color: #727d86;
+}
+body .box .box_login .reg_box span:hover a {
+  color: #D7D2CC;
+}
+body .box .box_reg {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  transform: rotateY(180deg) translateZ(1px);
+  box-shadow: 0 0 25px #B8BEDD;
+  background: -webkit-linear-gradient(right bottom, #D7D2CC, #304352);
+}
+body .box .box_reg a {
+  position: absolute;
+  top: 10px;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+body .box .box_reg a:hover {
+  color: #304352;
+}
+body .box .box_reg .home {
+  left: 20px;
+}
+body .box .box_reg .login {
+  right: 20px;
+}
+body .box .box_reg form {
+  position: relative;
+  top: 80px;
+  display: block;
+  width: 360px;
+  height: 220px;
+  margin-left: 70px;
+}
+body .box .box_reg form li {
+  position: relative;
+}
+body .box .box_reg form li:nth-child(1) {
+  top: 0;
+}
+body .box .box_reg form li:nth-child(2) {
+  top: 40px;
+}
+body .box .box_reg form li:nth-child(3) {
+  top: 80px;
+}
+body .box .box_reg form li:nth-child(4) {
+  top: 120px;
+}
+body .box .box_reg form li label {
+  position: absolute;
+  left: 0;
+}
+body .box .box_reg form li input {
+  position: absolute;
+  right: 0;
+  width: 230px;
+  height: 20px;
+  border: 0;
+  color: #D7D2CC;
+  border-bottom: 1px solid #D7D2CC;
+  background-color: transparent;
+}
+body .box .box_reg form button {
+  position: absolute;
+  left: 150px;
+  bottom: 20px;
+  width: 60px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  border: 2px solid #D7D2CC;
+  border-radius: 15px;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+body .box .box_reg form button:hover {
+  color: #304352;
+  border-color: #304352;
+}
