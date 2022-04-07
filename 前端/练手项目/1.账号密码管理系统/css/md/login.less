@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0;
+    /*CSS3盒子模型*/
+    box-sizing: border-box;
+    text-align: center;
+    color: #D7D2CC;
+}
+
+html {
+    height: 100%;
+    background: -webkit-linear-gradient(left top, #304352, #D7D2CC, #304352)
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+li {
+    list-style: none;
+}
+
+
+span {
+    font-size: 5.3333vw;
+    font-weight: 600;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #D7D2CC;
+}
+
+.rot180 {
+    transform: rotateY(180deg);
+}
+
+body {
+    perspective: 1000px;
+
+    .box {
+        position: relative;
+        width: 100vw;
+        height: 93.3333vw;
+        margin: 40vw auto;
+        // 使用z-index提高层级也会使子盒子的3d空间失效
+        // z-index: 1;
+        // 3d效果盒子的父盒子加opacity透明属性会导致子盒子3d立体空间不起效
+        // opacity: 0.7;
+        transform-style: preserve-3d;
+        transition: all 2s;
+
+        .box_login {
+            position: absolute;
+            width: 100vw;
+            height: 93.3333vw;
+            border-radius: 5.3333vw;
+            // 使用z-index提高层级也会使子盒子的3d空间失效,所以使用3d移位，向它自身垂直的方向移动使其分层
+            // z-index: 1;
+            transform: translateZ(1px);
+            box-shadow: 0 0 6.6667vw #B8BEDD;
+            background: -webkit-linear-gradient(right bottom, #D7D2CC, #304352);
+
+            .login_box {
+                float: left;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                color: #D7D2CC;
+
+                span {
+                    position: absolute;
+                    top: 5.3333vw;
+                    left: calc(50% - 6.6667vw);
+                    width: 13.3333vw;
+                    height: 10.6667vw;
+                    line-height: 10.6667vw;
+                    border-bottom: 1px solid #D7D2CC;
+                }
+
+                form {
+                    display: block;
+                    width: 80vw;
+                    height: 40vw;
+                    margin-top: 26.6667vw;
+                    margin-left: calc(50% - 40vw);
+
+                    input {
+                        display: block;
+                        width: 80vw;
+                        height: 10.6667vw;
+                        border: 0;
+                        color: #D7D2CC;
+                        border-bottom: 1px solid #D7D2CC;
+                        background-color: transparent;
+                    }
+
+                    button {
+                        display: block;
+                        width: 13.3333vw;
+                        height: 8vw;
+                        color: #D7D2CC;
+                        margin: 5.3333vw auto;
+                        transition: all 0.5s;
+                        border: 1px solid #D7D2CC;
+                        border-radius: 4vw;
+                        background-color: transparent;
+
+                        &:hover {
+                            color: #304352;
+                            border-color: #304352;
+                        }
+                    }
+                }
+
+                a {
+                    position: absolute;
+                    bottom: 2.6667vw;
+                    left: 2.6667vw;
+                    color: #D7D2CC;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        color: #304352;
+                    }
+                }
+            }
+
+            .reg_box {
+                position: absolute;
+                bottom: 2.6667vw;
+                right: 2.6667vw;
+                width: 48vw;
+                height: 20vw;
+                color: #727d86;
+
+                span {
+                    position: absolute;
+                    width: 16vw;
+                    height: 16vw;
+                    line-height: 16vw;
+                    color: #727d86;
+                    transition: all 0.5s;
+                    border: 1px solid #727d86;
+                    border-radius: 8vw;
+
+                    &:nth-child(1) {
+                        top: 0;
+                        left: 5.3333vw;
+
+                        a {
+                            color: #727d86;
+                            transition: all 0.5s;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        top: 0;
+                        left: 26.6667vw;
+                    }
+
+                    &:hover {
+                        color: #D7D2CC;
+                        background-color: #727d86;
+
+                        a {
+                            color: #D7D2CC;
+                        }
+                    }
+                }
+            }
+        }
+
+        .box_reg {
+            position: absolute;
+            width: 100vw;
+            height: 93.3333vw;
+            border-radius: 5.3333vw;
+            transform: rotateY(180deg) translateZ(1px);
+            box-shadow: 0 0 6.6667vw #B8BEDD;
+            background: -webkit-linear-gradient(right bottom, #D7D2CC, #304352);
+
+            a {
+                position: absolute;
+                top: 2.6667vw;
+                font-size: 5.3333vw;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: #304352;
+                }
+            }
+
+            .home {
+                left: 5.3333vw;
+            }
+
+            .login {
+                right: 5.3333vw;
+            }
+
+
+            form {
+                position: relative;
+                top: 18.6667vw;
+                display: block;
+                width: 90vw;
+                height: 80vw - 5.3333vw;
+                margin-left: calc(50% - 45vw);
+
+                li {
+                    position: relative;
+
+                    &:nth-child(1) {
+                        top: 0;
+                    }
+
+                    &:nth-child(2) {
+                        top: 16vw;
+                    }
+
+                    &:nth-child(3) {
+                        top: 32vw;
+                    }
+
+                    &:nth-child(4) {
+                        top: 48vw;
+                    }
+
+                    label {
+                        position: absolute;
+                        left: 0;
+                    }
+
+                    input {
+                        position: absolute;
+                        right: 0;
+                        width: 53.3333vw;
+                        height: 5.3333vw;
+                        border: 0;
+                        color: #D7D2CC;
+                        border-bottom: 1px solid #D7D2CC;
+                        background-color: transparent;
+                    }
+                }
+
+                button {
+                    position: absolute;
+                    left: calc(50% - 8vw);
+                    bottom: 4vw;
+                    width: 16vw;
+                    height: 8vw;
+                    font-size: 4.8vw;
+                    font-weight: 400;
+                    border: 1px solid #D7D2CC;
+                    border-radius: 4vw;
+                    background-color: transparent;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        color: #304352;
+                        border-color: #304352;
+                    }
+                }
+            }
+        }
+    }
+}
